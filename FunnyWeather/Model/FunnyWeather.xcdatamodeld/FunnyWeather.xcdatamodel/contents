@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Forecast" representedClassName="Forecast" syncable="YES">
+        <attribute name="dt" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maxTemp" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="minTemp" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="place" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Place" inverseName="forecast" inverseEntity="Place" syncable="YES"/>
+    </entity>
+    <entity name="History" representedClassName="History" syncable="YES">
+        <attribute name="dt" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maxTemp" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="minTemp" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="place" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Place" inverseName="history" inverseEntity="Place" syncable="YES"/>
+    </entity>
+    <entity name="Joke" representedClassName="Joke" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Place" representedClassName="Place" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="forecast" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Forecast" inverseName="place" inverseEntity="Forecast" syncable="YES"/>
+        <relationship name="history" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="History" inverseName="place" inverseEntity="History" syncable="YES"/>
+        <relationship name="weather" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Weather" inverseName="place" inverseEntity="Weather" syncable="YES"/>
+        <relationship name="webcam" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Webcam" inverseName="place" inverseEntity="Webcam" syncable="YES"/>
+    </entity>
+    <entity name="Weather" representedClassName="Weather" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="main" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="temp" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="place" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Place" inverseName="weather" inverseEntity="Place" syncable="YES"/>
+    </entity>
+    <entity name="Webcam" representedClassName="Webcam" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="place" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Place" inverseName="webcam" inverseEntity="Place" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Forecast" positionX="-171" positionY="-369" width="128" height="103"/>
+        <element name="History" positionX="-229" positionY="-236" width="128" height="103"/>
+        <element name="Joke" positionX="-378" positionY="-225" width="128" height="60"/>
+        <element name="Place" positionX="-630" positionY="-426" width="128" height="148"/>
+        <element name="Weather" positionX="-266" positionY="-107" width="128" height="118"/>
+        <element name="Webcam" positionX="-308" positionY="36" width="128" height="90"/>
+    </elements>
+</model>

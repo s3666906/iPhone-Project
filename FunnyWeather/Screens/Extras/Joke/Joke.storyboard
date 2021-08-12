@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ce7-Ct-O5S">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Joke View Controller-->
+        <scene sceneID="3Ub-N9-WdP">
+            <objects>
+                <viewController storyboardIdentifier="Joke" id="Ce7-Ct-O5S" customClass="JokeViewController" customModule="FunnyWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="scH-AC-Tex" userLabel="JokeView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joke goes here..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8al-UE-uZo">
+                                <rect key="frame" x="20" y="64" width="374" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="wGk-SB-BSq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.044934989959999998" blue="0.32061352510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="8al-UE-uZo" firstAttribute="top" secondItem="odB-iU-G64" secondAttribute="top" constant="20" id="1Kr-tZ-5Sx"/>
+                            <constraint firstItem="8al-UE-uZo" firstAttribute="trailing" secondItem="odB-iU-G64" secondAttribute="trailing" constant="-20" id="S6W-eJ-x0V"/>
+                            <constraint firstItem="8al-UE-uZo" firstAttribute="leading" secondItem="odB-iU-G64" secondAttribute="leading" constant="20" id="rve-T7-cUK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="odB-iU-G64"/>
+                    </view>
+                    <connections>
+                        <outlet property="JokeLabel" destination="8al-UE-uZo" id="Ogg-os-SIv"/>
+                        <outlet property="JokeView" destination="scH-AC-Tex" id="Wt4-tu-gBe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vVG-gq-2UC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="225" y="69"/>
+        </scene>
+    </scenes>
+</document>
