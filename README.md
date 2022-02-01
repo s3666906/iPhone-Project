@@ -1,5 +1,6 @@
-#A2 - Funny Weather
+# A2 - Funny Weather
 iPhone Software Engineering 2020, SP3
+Miroslav Petkovic -s3666906
 
 ## Make The Weather Fun Again
 
